@@ -1,0 +1,122 @@
+{
+  "id": "7bd9a65d-e0b8-4e8c-9cc7-094942615ae6",
+  "name": "CantidadPersonas",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "1",
+      "synonyms": [
+        "1",
+        "una"
+      ]
+    },
+    {
+      "value": "2",
+      "synonyms": [
+        "2",
+        "dos",
+        "DOS",
+        "DOZ",
+        "Dos",
+        "doZ",
+        "Mi chica y yo",
+        "mi chica y yo",
+        "Voy mi chica y yo",
+        "voy mi chica y yo",
+        "vamos mi chica y yo",
+        "bamos mi chica y yo",
+        "Bamos mi chica y yo",
+        "voy con mi chica",
+        "Voy con mi chica"
+      ]
+    },
+    {
+      "value": "3",
+      "synonyms": [
+        "3",
+        "tres",
+        "TRES",
+        "treS",
+        "trez"
+      ]
+    },
+    {
+      "value": "4",
+      "synonyms": [
+        "4",
+        "cuatro",
+        "Cuatro",
+        "CUATRO",
+        "kuatro"
+      ]
+    },
+    {
+      "value": "5",
+      "synonyms": [
+        "5",
+        "cinco",
+        "sinco",
+        "CINCO",
+        "ZINCO",
+        "ZINKO",
+        "sinko",
+        "zinko"
+      ]
+    },
+    {
+      "value": "6",
+      "synonyms": [
+        "6",
+        "seis",
+        "SEIS",
+        "zeiz",
+        "seiz",
+        "ceis",
+        "Seis"
+      ]
+    },
+    {
+      "value": "7",
+      "synonyms": [
+        "7",
+        "siete",
+        "Siete",
+        "SIETE",
+        "ziete",
+        "ciete"
+      ]
+    },
+    {
+      "value": "8",
+      "synonyms": [
+        "8",
+        "ocho",
+        "Ocho",
+        "OCHO"
+      ]
+    },
+    {
+      "value": "9",
+      "synonyms": [
+        "9",
+        "NUEVE",
+        "nueve",
+        "nuebe",
+        "Nueve",
+        "Nuebe"
+      ]
+    },
+    {
+      "value": "10",
+      "synonyms": [
+        "10",
+        "dies",
+        "DIEZ",
+        "diez",
+        "Diez"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}

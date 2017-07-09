@@ -1,0 +1,220 @@
+{
+  "userSays": [
+    {
+      "id": "fd9c8002-6224-4720-86bf-883247a29c31",
+      "data": [
+        {
+          "text": "2020-05-12",
+          "alias": "fechaSalida",
+          "meta": "@sys.any",
+          "userDefined": true
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "32e6d658-2cba-44e3-aece-39189356819d",
+      "data": [
+        {
+          "text": "hola ¿cómo estás?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "ca776337-4de3-4cc1-9595-848d136ad0ee",
+      "data": [
+        {
+          "text": "¿qué tal?"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f639ec00-c4e7-4218-ae02-d5d1d3da17de",
+      "data": [
+        {
+          "text": "hola"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "35cc3b0f-d9ec-4185-80d9-c445b639b2e8",
+      "data": [
+        {
+          "text": "hola coco"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "b97bfeec-58c8-4521-a518-1ed54d60c958",
+      "data": [
+        {
+          "text": "Vale",
+          "meta": "@sys.ignore",
+          "userDefined": false
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8d435690-215b-4f00-9de6-c0954736babc",
+      "data": [
+        {
+          "text": "va"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "aa5c2e5e-523f-4488-87b1-e634d3969af7",
+      "data": [
+        {
+          "text": "De acuerdo"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "76e91725-0ab8-41ae-84f8-14d4aa5e0283",
+      "data": [
+        {
+          "text": "sí"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "bbbd6407-a248-4cb7-8fb9-5648329192fa",
+      "data": [
+        {
+          "text": "me agrada"
+        }
+      ],
+      "isTemplate": false,
+      "count": 1
+    },
+    {
+      "id": "dc1f5103-23ee-4995-9e48-a35fc500c30a",
+      "data": [
+        {
+          "text": "entendido"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "f3d3f440-8c9c-463e-a97c-466ae37dd04d",
+      "data": [
+        {
+          "text": "está bien"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "cfa99f51-b843-45fc-84d9-82f583444cde",
+      "data": [
+        {
+          "text": "gracias"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    },
+    {
+      "id": "8cabe73c-40b4-4555-ba15-03d85e8e5ec0",
+      "data": [
+        {
+          "text": "ok"
+        }
+      ],
+      "isTemplate": false,
+      "count": 0
+    }
+  ],
+  "id": "fe268d3f-9d8f-496f-b517-303f2c609bad",
+  "name": "RecopilarDatos",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [
+        {
+          "name": "RecopilarDatos",
+          "parameters": {},
+          "lifespan": 10000
+        }
+      ],
+      "parameters": [
+        {
+          "required": true,
+          "dataType": "@RangoPresupuesto",
+          "name": "rangoPresupuesto",
+          "value": "$rangoPresupuesto",
+          "prompts": [
+            "¡Hola Jorge! Soy trippy bot, te ayudaré a encontrar las mejores opciones en tus próximas vacaciones, sólo dime ¿Cuál es nuestro presupuesto ? 😀"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@Dias",
+          "name": "diasViaje",
+          "value": "$diasViaje",
+          "prompts": [
+            "Perfecto, ¿Cuántos días nos vamos? 😝"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@CantidadPersonas",
+          "name": "numPersonas",
+          "value": "$numPersonas",
+          "prompts": [
+            "¿Vas solo o con alguien?"
+          ]
+        },
+        {
+          "required": true,
+          "dataType": "@sys.any",
+          "name": "fechaSalida",
+          "value": "$fechaSalida",
+          "prompts": [
+            "Eso es todo 👍 ¿Y cuándo sales? 😜"
+          ]
+        }
+      ],
+      "messages": [
+        {
+          "type": 0,
+          "speech": "Estoy buscando lo mejor para ti... chécate estas opciones"
+        }
+      ],
+      "defaultResponsePlatforms": {}
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ]
+}

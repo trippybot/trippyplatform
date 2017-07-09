@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+
+<html>
+	<head data-ng-app="app">
+		<meta charset="utf-8">
+		<title>trippy</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="../../assets/plugins/bootstrap/dist/css/bootstrap.min.css">
+
+		<link rel="stylesheet" type="text/css" href="../../assets/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/framework.css">
+		<link rel="stylesheet" type="text/css" href="../../assets/css/washington.css">
+		
+		<script src="../../assets/js/webfont.js"></script>
+		<script>
+			WebFont.load({
+				google : {
+					families : [ "Montserrat:400,700" ]
+				}
+			});
+		</script>
+		<script type="text/javascript" src="../../assets/js/modernizr.js"></script>
+
+		<link href="../../assets/css/ionicons.min.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body ng-app="app" ng-controller="BotController">
+		<section class="w-section mobile-wrapper">
+	
+			<div class="page-content" id="main-stack">
+				<div class="w-nav navbar" data-collapse="all"
+					data-animation="over-left" data-duration="400" data-contain="1"
+					data-easing="ease-out-quint" data-no-scroll="1">
+					<div class="w-container">
+						<div class="wrapper-mask" data-ix="menu-mask"></div>
+						<div class="navbar-title">trippy</div>
+						<a class="w-inline-block navbar-button" href="messages.html"
+							data-load="1">
+							<div class="navbar-button-icon icon ion-ios-arrow-thin-left"></div>
+						</a> <a class="w-inline-block navbar-button right" href="../../tpl/app/settings.html"
+							data-ix="search-box">
+							<div class="navbar-button-icon smaller icon ion-ios-gear-outline"
+								data-load="1"></div>
+						</a>
+					</div>
+				</div>
+				<div class="body">
+					<ul class="list list-chats">
+
+						<li class="{{m.type == 'app' ? 'w-clearfix' : ''}} list-chat {{m.type == 'app' ? '' : 'right'}}" 
+							ng-repeat="m in currentConversation.messages track by m.id">
+							<div class="column-left chat" ng-show="{{m.type == 'app'}}">
+								<div class="image-message chat">
+									<img src="../../assets/images/trippy.png">
+								</div>
+							</div>
+							<div class="w-clearfix column-right chat {{m.type == 'app' ? '' : 'right'}}">
+								<div class="arrow-globe {{m.type == 'app' ? '' : 'right'}}"></div>
+								<div class="chat-text {{m.type == 'app' ? '' : 'right'}}" ng-show="m.text != 'loading'">
+									{{m.text}}
+								</div>
+								<div class="chat-text" ng-show="m.text == 'loading'">
+									ahí voy, espera&nbsp;<img style="height: 20px;" src="../../assets/images/loading.gif">
+								</div>
+								<div class="chat-time {{m.type == 'app' ? '' : 'right'}}">{{m.date | date : 'dd/MM @ HH:mm'}}</div>
+							</div>
+						</li>
+
+
+						<li class="list-chat" ng-show="tripsReady">
+							<div class="w-clearfix chat">
+								<div class="arrow-globe"></div>
+								<div class="chat-text" style="width: 100%; height: 600px;">
+								
+									<div class="carousel slide width-full" data-ride="carousel">
+										<!-- Indicators -->
+										<ol class="carousel-indicators">
+											<li data-target="#carousel-example-generic" 
+												data-slide-to="{{$index}}" class="{{$index == 0 ? 'active' : ''}}" 
+												ng-repeat="t in trips track by $index">
+											</li>
+										</ol>
+							
+										<!-- Wrapper for slides -->
+										<div class="carousel-inner" role="listbox">
+											<div class="item {{$index == 0 ? 'active' : ''}}" data-index="{{$index}}" 
+													ng-repeat="t in trips track by $index">
+												
+												<div class="grey-header">
+													<h2 class="grey-heading-title">
+														Opción <b>{{t.flight.destination}}</b> @ $ <b>{{t.total | number : 2}}</b>
+													</h2>
+												</div>
+	
+												<div class="text-new no-borders">
+													<div class="w-row">
+														<div class="w-col w-col-6 w-col-small-6 w-col-tiny-6">
+															<p class="description-new">
+																<h5>Tu vuelo sale</h5> 
+																<br/>
+																<b>{{t.flight.departDate | date : 'dd/MM/yyyy @ HH:mm'}}</b>
+															</p>
+														</div>
+														<div class="w-col w-col-6 w-col-small-6 w-col-tiny-6">
+															<p class="description-new">
+																<h5>Y regresas</h5>
+																<br/>
+																<b>{{t.flight.returnDate | date : 'dd/MM/yyyy @ HH:mm'}}</b>
+															</p>
+														</div>
+													</div>
+													<div class="separator-button"></div>
+													<div class="w-row">
+														<h5>Te hospedas en {{t.hotels[0].name}}</h5>
+														<div class="w-col w-col-12 w-col-small-12 w-col-tiny-12">
+															<p class="description-new">{{t.hotels[0].locationDescription}}</p>
+														</div>
+													</div>
+													<div class="w-row" ng-repeat="f in t.funs track by $index">
+														<h5>Actividades en día {{$index + 1}}</h5>
+														<div class="w-col w-col-12 w-col-small-12 w-col-tiny-12">
+															<p class="description-new">Come en {{t.restaurants[$index].name}} en {{t.restaurants[$index].locationDescription}}</p>
+															<p class="description-new">Y luego ve a {{f.name}} en {{t.restaurants[$index].locationDescription}}</p>
+														</div>
+													</div>
+													<div class="separator-button"></div>
+													<a class="category-link" href="#" ng-click="viewTrip(t)"
+														style="background-color: #FFC400; padding-top: 3px; color: #FFFFFF; font-size: 14px;">
+														ver trip
+													</a>
+												</div>											
+												
+											</div>
+										</div>	
+									</div>							
+	
+								</div>
+								<div class="chat-time right">{{m.date | date : 'dd/MM @ HH:mm'}}</div>
+							</div>
+						</li>
+
+				</ul>
+				</div>
+				<div class="input-chat-block">
+					<div class="w-form">
+						<input class="w-input input-chat" type="text"
+							placeholder="tu mensaje" name="message" ng-model="currentUserMessage"> 
+						<input class="w-button chat-button" 
+							ng-disabled="state == 'loading'"
+							type="button" value="Enviar" ng-click="sendText()">
+					</div>
+				</div>
+			</div>
+			<div class="page-content loading-mask" id="new-stack">
+				<div class="loading-icon">
+					<div class="navbar-button-icon icon ion-load-d"></div>
+				</div>
+			</div>
+			<div class="shadow-layer"></div>
+		</section>
+		
+		<script type="text/javascript" src="../../assets/js/jquery.min.js"></script>
+	    <script type="text/javascript" src="../../assets/plugins/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="../../assets/js/framework.js"></script>
+	    <script type="text/javascript" src="../../assets/plugins/bcSwipe/jquery.bcSwipe.js"></script>
+		
+	    <script type="text/javascript" src="../../assets/plugins/angular/angular.js"></script>
+	    <script type="text/javascript" src="../../app/app.js"></script>
+	    <script type="text/javascript" src="../../app/controller/core/bot.controller.js"></script>
+
+	    <script type="text/javascript" src="../../cordova.js"></script>
+
+		<script type="text/javascript">
+		
+			document.addEventListener("deviceready", onDeviceReady, false);
+			document.addEventListener("backbutton", back, false);
+	
+			function onDeviceReady() {
+				ApiAIPlugin.init({
+			            clientAccessToken: "cf557f396a5249e0822509666ff94576", 
+			            lang: "es"
+			        }, 
+			        function(result) { 
+			        	
+			        },
+			        function(error) {
+			        	
+			        }
+			    );
+			}
+			
+			function back() {
+			}
+			
+		</script>
+		
+	</body>
+</html>

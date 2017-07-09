@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html data-ng-app="app" ng-controller="AppCtrl">
+	<head>
+		<meta charset="utf-8">
+		<title>Trippy</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+		<link rel="stylesheet" type="text/css" href="../assets/css/normalize.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/framework.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/washington.css">
+		<link rel="stylesheet" type="text/css" href="../assets/css/styles.css">
+		
+		<script src="../assets/js/webfont.js"></script>
+		
+		<script>
+			WebFont.load({
+				google : {
+					families : [ "Montserrat:400,700" ]
+				}
+			});
+		</script>
+		
+		<script type="text/javascript" src="../assets/js/modernizr.js"></script>
+		<link type="image/x-icon" rel="shortcut icon" href="../assets/images/logoStandford32.ico">
+		<link rel="apple-touch-icon" href="../assets/images/logoStandford32.ico">
+		<link type="text/css" href="../assets/css/ionicons.min.css" rel="stylesheet" />
+	</head>
+	<body>
+
+		<div class="full-height" ui-view></div>
+
+		<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../assets/js/framework.js"></script>
+		
+	    <!-- ANGULAR -->
+	    <script type="text/javascript" src="../assets/plugins/angular/angular.js"></script>
+	    <script type="text/javascript" src="../assets/plugins/angular-ui-router/angular-ui-router.min.js"></script>
+	    <script type="text/javascript" src="../assets/plugins/angular-ui-util/ui-utils.min.js"></script>
+	    <script type="text/javascript" src="../assets/plugins/angular-sanitize/angular-sanitize.min.js"></script>
+	    <script type="text/javascript" src="../assets/plugins/angular-oc-lazyload/ocLazyLoad.min.js"></script>
+
+	    <!-- APP -->
+	    <script type="text/javascript" src="../app/app.js"></script>
+	    <script type="text/javascript" src="../app/config/config.js"></script>
+	    <script type="text/javascript" src="../app/config/config.lazyload.js"></script>
+	    <script type="text/javascript" src="../app/controller/main.js"></script>
+		
+		<script src="../cordova.js"></script>
+
+	</body>
+</html>

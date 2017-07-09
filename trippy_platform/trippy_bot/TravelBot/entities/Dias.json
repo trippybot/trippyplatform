@@ -1,0 +1,114 @@
+{
+  "id": "b3369d17-ac0c-481d-8f85-c05e9bea2b99",
+  "name": "Dias",
+  "isOverridable": true,
+  "entries": [
+    {
+      "value": "1",
+      "synonyms": [
+        "1",
+        "uno",
+        "Uno",
+        "UNO"
+      ]
+    },
+    {
+      "value": "2",
+      "synonyms": [
+        "2",
+        "dos",
+        "DOS",
+        "Dos",
+        "doz"
+      ]
+    },
+    {
+      "value": "3",
+      "synonyms": [
+        "3",
+        "tres",
+        "Tres",
+        "TRES",
+        "trez"
+      ]
+    },
+    {
+      "value": "4",
+      "synonyms": [
+        "4",
+        "cuatro",
+        "Cuatro",
+        "CUATRO"
+      ]
+    },
+    {
+      "value": "5",
+      "synonyms": [
+        "5",
+        "cinco",
+        "CINCO",
+        "Cinco",
+        "zinco",
+        "sinco"
+      ]
+    },
+    {
+      "value": "6",
+      "synonyms": [
+        "6",
+        "seis",
+        "Seis",
+        "SEIS",
+        "ceis",
+        "zeis",
+        "zeiz"
+      ]
+    },
+    {
+      "value": "7",
+      "synonyms": [
+        "7",
+        "siete",
+        "SIETE",
+        "Siete",
+        "ciete",
+        "ziete"
+      ]
+    },
+    {
+      "value": "8",
+      "synonyms": [
+        "8",
+        "Ocho",
+        "ocho",
+        "OCHO"
+      ]
+    },
+    {
+      "value": "9",
+      "synonyms": [
+        "9",
+        "Nueve",
+        "nueve",
+        "NUEVE",
+        "nuebe"
+      ]
+    },
+    {
+      "value": "10",
+      "synonyms": [
+        "10",
+        "DIEZ",
+        "diez",
+        "dies",
+        "Diez",
+        "DiEz",
+        "DIez",
+        "dieZ",
+        "dIeZ"
+      ]
+    }
+  ],
+  "isEnum": false,
+  "automatedExpansion": false
+}
